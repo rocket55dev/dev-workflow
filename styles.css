@@ -104,6 +104,12 @@ aside h3 {
 
 aside a {
   color: white;
+  transition: .2s ease all;
+}
+
+aside a:hover {
+  color: #eee;
+  transition: .2s ease all;
 }
 
 article {
