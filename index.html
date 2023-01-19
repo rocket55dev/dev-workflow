@@ -50,10 +50,11 @@
           <h3>Current development problems</h3>
           <ul>
             <li>Codebases in both GitLab and GitHub</li>
-            <li>Potential for overwriting other developers, and losing track of code (due to spotty use of Git, and using FTP software for pushing code to production)</li>
-            <li>Unorganized code &amp; codebases (no consistent structure)</li>
             <li>No clear process for branching and merging in git</li>
             <li>Numerous workflow issues, not the least of which being developers pushing code through an FTP client like Filezilla</li>
+            <li>Potential for overwriting other developers, and losing track of code (due to spotty use of Git, and using FTP software for pushing code to production)</li>
+            <li>No formal system for code reviews</li>
+            <li>Unorganized code &amp; codebases (no consistent structure)</li>            
             <li>Different requirements and guidelines on nearly every project</li>
             <li>No standard codebase to work from, due to the numerous clients and sometimes inheriting projects from other developers</li>
           </ul>
@@ -70,7 +71,7 @@
             </li>
             <li>Just kidding, there is one exception. If you are building a brand new site, you do not need to use pull requests or branches.</li>
             <li>However, for any existing site, all code changes should be done in a PR. Yes, this adds a little bit of extra time on our end as developers, but it also safeguards against breaking changes, and allows us to revert a PR if bad code gets accidentally merged in or wasn't fully tested before merging</li>
-            <li>Not to be a nag, <strong>but we have to be strict with this</strong>. Every code change to an existing site needs to be in a PR. Once the code looks good, move it to the staging branch. Once staging looks good, merge it into <code>main</code></li>
+            <li>Not to be a nag, <strong>but we have to be strict with this</strong>. Every code change to an existing site needs to be in a PR. Once the code looks good, merge it into the staging branch. Once staging looks good, merge it into <code>main</code></li>
           </ul>
         </div>
       </section>
@@ -96,8 +97,10 @@
         <div class="container">
           <h3>Rollout Plan</h3>
           <ul>
+            <li>Get developer buy-in across the board</li>
             <li>Effective (almost) immediately, all code should be tracked in Git, even for any new sites</li>
             <li>Also, any new changes to code should be done in a pull request. Once that pull request is approved, either by its author, or by another developer, it should get merged back into the staging branch. Then once it's approved to go live, it should get merged into the <code>main</code> branch.</li>
+            <li>Test out CI/CD depoloyments on WordPress sites</li>
           </ul>
         </div>
       </section>
