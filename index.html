@@ -30,19 +30,76 @@
 
   <main>
     <aside>
-      <h3>Menu</h3>
+      <h4>Menu</h4>
       <ul>
-        <li><a href="#">Line One</a></li>
-        <li><a href="#">Line Two</a></li>
-        <li><a href="#">Line Three</a></li>
+        <li><a href="#top">Home</a></li>
+        <li><a href="#problems">Problems</a></li>
+        <li><a href="#solutions">Solutions</a></li>
+        <li><a href="#roadmap">Roadmap</a></li>
+        <li><a href="#rollout">Rollout</a></li>
       </ul>
     </aside>
     <article>
-      <section>
+      <section class="intro" id="top">
         <div class="container">
-          <h1>Test</h1>
+          <h1>Dev Workflow - Rocket55</h1>
         </div>
       </section>
+      <section id="problems">
+        <div class="container">          
+          <h3>Current development problems</h3>
+          <ul>
+            <li>Codebases in both GitLab and GitHub</li>
+            <li>Unorganized code &amp; codebases</li>
+            <li>No clear process for branching and merging in git</li>
+            <li>Numerous workflow issues, not the least of which being developers pushing code through an FTP client like Filezilla</li>
+            <li>Different requirements and guidelines on nearly every project</li>
+            <li>No standard codebase to work from, due to the numerous clients and sometimes inheriting projects from other developers</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="solutions">
+        <div class="container">
+          <h3>Proposed solutions</h3>
+          <ul>
+            <li>Any new repository or code tracking should be done and GitHub</li>
+            <li>The main branch for all repositories should be named <code>main</code></li>
+            <li>Every single code change should take place within a pull request, <em>no exceptions</em></li>
+            <li>Just kidding, there is one exception. If you are building a brand new site, you do not need to use pull requests on branches</li>
+            <li>However, for any existing site, all code changes should be done in a PR. Yes, this adds a little bit of extra time on our end as developers, but it also safeguards against breaking changes, and allows us to revert a PR if bad code gets accidentally merged in or wasn't fully tested before merging</li>
+            <li>Not to be a nag, <strong>but we have to be strict with this</strong>. Every code change to an existing site needs to be in a PR. Once the code looks good, move it to the staging branch. Once staging looks good, merge it into <code>main</code></li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="roadmap">
+        <div class="container">
+          <h3>Future Roadmap</h3>
+          <ul>
+            <li>We should eventually strive to never be FTP-ing files onto our website. We should always set up some sort of continuous deployment (CI/CD), which allows our code changes to be pushed up directly from gate and populate this site</li>
+            <li>We will need to research and further document solutions to this problem, but ideally we would use the tools provided by Codeship/WP engine/etc.</li>
+            <li>In addition, we should implement code reviews where necessary. Each PR will by default be tagged with a low risk flag,
+            but if the code is medium or high risk, we recommend getting approval before merging. This may seem trivial now, but
+            eventually as an agency, as we build more complex websites, and web apps over time, it will be essential to have this
+            process built into our existing workflow.</li>
+            <li>It's very easy to get lazy and complacent with pushing code, and on marketing
+            type of websites it is less imperative to have code reviews, but we should still get in the habit of keeping it as a
+            viable option while building sites.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="rollout">
+        <div class="container">
+          <h3>Rollout Plan</h3>
+          <ul>
+            <li>Effective (almost) immediately, all code should be tracked in Git, even for my new sites</li>
+            <li>Also, any new changes to code should be done in a pull request. Once that pull request is approved, either by its author, or by another developer, it should get merged back into the staging branch. Then once it's approved to go live, it should get merged into the <code>main</code> branch.</li>
+          </ul>
+        </div>
+      </section>
+
     </article>
   </main>
   
