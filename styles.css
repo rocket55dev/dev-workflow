@@ -1,0 +1,39 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body, 
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: white;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  margin-top: 0;
+  padding-bottom: 1.5rem;
+}
+
+section {
+  padding: 4rem 0;
+}
+
+.container {
+  width: 92%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
